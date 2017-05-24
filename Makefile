@@ -12,7 +12,12 @@ COMPS=cmdln-2.0.0\
 	requests-2.11.1\
 	urllib3-1.16\
 	vcversioner-2.16.0.0\
-	setuptools-28.2.0
+	setuptools-28.2.0\
+	inotify-0.2.8\
+	websocket_client-0.40.0\
+	pyasn1-0.2.3\
+	pysnmp-mibs-0.1.6\
+	pysnmp-4.3.5
 
 	
 
@@ -28,6 +33,11 @@ clean:
 	$(RMDIRFORCE) $(DESTDIR)/urllib3-1.16
 	$(RMDIRFORCE) $(DESTDIR)/vcversioner-2.16.0.0
 	$(RMDIRFORCE) $(DESTDIR)/setuptools-28.2.0
+	$(RMDIRFORCE) $(DESTDIR)/inotify-0.2.8
+	$(RMDIRFORCE) $(DESTDIR)/websocket_client-0.40.0
+	$(RMDIRFORCE) $(DESTDIR)/pyasn1-0.2.3
+	$(RMDIRFORCE) $(DESTDIR)/pysnmp-mibs-0.1.6
+	$(RMDIRFORCE) $(DESTDIR)/pysnmp-4.3.5
 
 install: $(COMPS)
 	$(RSYNC) cmdln-2.0.0 $(DESTDIR) 
@@ -39,4 +49,9 @@ install: $(COMPS)
 	$(RSYNC) urllib3-1.16 $(DESTDIR) 
 	$(RSYNC) vcversioner-2.16.0.0 $(DESTDIR)
 	$(RSYNC) setuptools-28.2.0 $(DESTDIR)
+	$(RSYNC) inotify-0.2.8 $(DESTDIR)
+	$(RSYNC) websocket_client-0.40.0 $(DESTDIR)
+	$(RSYNC) pyasn1-0.2.3 $(DESTDIR)
+	$(RSYNC) pysnmp-mibs-0.1.6 $(DESTDIR)
+	$(RSYNC) pysnmp-4.3.5 $(DESTDIR)
 
