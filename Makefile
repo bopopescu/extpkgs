@@ -17,7 +17,8 @@ COMPS=cmdln-2.0.0\
 	websocket_client-0.40.0\
 	pyasn1-0.2.3\
 	pysnmp-mibs-0.1.6\
-	pysnmp-4.3.5
+	pysnmp-4.3.5\
+	netaddr-0.7.19
 
 	
 
@@ -38,6 +39,7 @@ clean:
 	$(RMDIRFORCE) $(DESTDIR)/pyasn1-0.2.3
 	$(RMDIRFORCE) $(DESTDIR)/pysnmp-mibs-0.1.6
 	$(RMDIRFORCE) $(DESTDIR)/pysnmp-4.3.5
+	$(RMDIRFORCE) $(DESTDIR)/netaddr-0.7.19
 
 install: $(COMPS)
 	$(RSYNC) cmdln-2.0.0 $(DESTDIR) 
@@ -54,4 +56,5 @@ install: $(COMPS)
 	$(RSYNC) pyasn1-0.2.3 $(DESTDIR)
 	$(RSYNC) pysnmp-mibs-0.1.6 $(DESTDIR)
 	$(RSYNC) pysnmp-4.3.5 $(DESTDIR)
+	$(RSYNC) netaddr-0.7.19 $(DESTDIR)
 
