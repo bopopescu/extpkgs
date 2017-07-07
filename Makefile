@@ -18,7 +18,8 @@ COMPS=cmdln-2.0.0\
 	pyasn1-0.2.3\
 	pysnmp-mibs-0.1.6\
 	pysnmp-4.3.5\
-	netaddr-0.7.19
+	netaddr-0.7.19\
+	pexpect-4.2.1
 
 	
 
@@ -40,6 +41,7 @@ clean:
 	$(RMDIRFORCE) $(DESTDIR)/pysnmp-mibs-0.1.6
 	$(RMDIRFORCE) $(DESTDIR)/pysnmp-4.3.5
 	$(RMDIRFORCE) $(DESTDIR)/netaddr-0.7.19
+	$(RMDIRFORCE) $(DESTDIR)/pexpect-4.2.1
 
 install: $(COMPS)
 	$(RSYNC) cmdln-2.0.0 $(DESTDIR) 
@@ -57,4 +59,5 @@ install: $(COMPS)
 	$(RSYNC) pysnmp-mibs-0.1.6 $(DESTDIR)
 	$(RSYNC) pysnmp-4.3.5 $(DESTDIR)
 	$(RSYNC) netaddr-0.7.19 $(DESTDIR)
+	$(RSYNC) pexpect-4.2.1 $(DESTDIR)
 
