@@ -52,7 +52,7 @@ def main ():
 		print '\tChild appears to be dead.'
 #		print str(e)
 	print
-	print 'Reading from master fd:', os.read (fd, 1000)
+	print 'Reading from main fd:', os.read (fd, 1000)
 
 
 
